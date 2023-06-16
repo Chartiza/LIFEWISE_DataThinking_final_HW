@@ -1,0 +1,250 @@
+n	Country	Region
+1	Afghanistan	Southern_Asia
+2	Åland Islands	Northern_Europe
+3	Albania	Southern_Europe
+4	Algeria	Northern_Africa
+5	American Samoa	Polynesia
+6	Andorra	Southern_Europe
+7	Angola	Middle_Africa
+8	Anguilla	Caribbean
+9	Antarctica	Northern_America
+10	Antigua and Barbuda	Caribbean
+11	Argentina	South_America
+12	Armenia	Western_Asia
+13	Aruba	Caribbean
+14	Australia	Australia
+15	Austria	Western_Europe
+16	Azerbaijan	Western_Asia
+17	Bahamas	Caribbean
+18	Bahrain	Western_Asia
+19	Bangladesh	Southern_Asia
+20	Barbados	Caribbean
+21	Belarus	Eastern_Europe
+22	Belgium	Western_Europe
+23	Belize	Central_America
+24	Benin	Western_Africa
+25	Bermuda	Northern_America
+26	Bhutan	Southern_Asia
+27	Bolivia (Plurinational State of)	South_America
+28	Bonaire, Sint Eustatius and Saba	Caribbean
+29	Bosnia and Herzegovina	Southern_Europe
+30	Botswana	Southern_Africa
+31	Bouvet Island	South_America
+32	Brazil	South_America
+33	British Indian Ocean Territory	Eastern_Africa
+34	British Virgin Islands	Caribbean
+35	Brunei Darussalam	South-eastern_Asia
+36	Bulgaria	Eastern_Europe
+37	Burkina Faso	Western_Africa
+38	Burundi	Eastern_Africa
+39	Cabo Verde	Western_Africa
+40	Cambodia	South-eastern_Asia
+41	Cameroon	Middle_Africa
+42	Canada	Northern_America
+43	Cayman Islands	Caribbean
+44	Central African Republic	Middle_Africa
+45	Chad	Middle_Africa
+46	Chile	South_America
+47	China	Eastern_Asia
+48	China, Hong Kong Special Administrative Region	Eastern_Asia
+49	China, Macao Special Administrative Region	Eastern_Asia
+50	Christmas Island	Australia
+51	Cocos (Keeling) Islands	Australia
+52	Colombia	South_America
+53	Comoros	Eastern_Africa
+54	Congo	Middle_Africa
+55	Cook Islands	Polynesia
+56	Costa Rica	Central_America
+57	Côte d’Ivoire	Western_Africa
+58	Croatia	Southern_Europe
+59	Cuba	Caribbean
+60	Curaçao	Caribbean
+61	Cyprus	Western_Asia
+62	Czechia	Eastern_Europe
+63	Democratic People's Republic of Korea	Eastern_Asia
+64	Democratic Republic of the Congo	Middle_Africa
+65	Denmark	Northern_Europe
+66	Djibouti	Eastern_Africa
+67	Dominica	Caribbean
+68	Dominican Republic	Caribbean
+69	Ecuador	South_America
+70	Egypt	Northern_Africa
+71	El Salvador	Central_America
+72	Equatorial Guinea	Middle_Africa
+73	Eritrea	Eastern_Africa
+74	Estonia	Northern_Europe
+75	Eswatini	Southern_Africa
+76	Ethiopia	Eastern_Africa
+77	Falkland Islands (Malvinas)	South_America
+78	Faroe Islands	Northern_Europe
+79	Fiji	Melanesia
+80	Finland	Northern_Europe
+81	France	Western_Europe
+82	French Guiana	South_America
+83	French Polynesia	Polynesia
+84	French Southern Territories	Eastern_Africa
+85	Gabon	Middle_Africa
+86	Gambia	Western_Africa
+87	Georgia	Western_Asia
+88	Germany	Western_Europe
+89	Ghana	Western_Africa
+90	Gibraltar	Southern_Europe
+91	Greece	Southern_Europe
+92	Greenland	Northern_America
+93	Grenada	Caribbean
+94	Guadeloupe	Caribbean
+95	Guam	Micronesia
+96	Guatemala	Central_America
+97	Guernsey	Northern_Europe
+98	Guinea	Western_Africa
+99	Guinea-Bissau	Western_Africa
+100	Guyana	South_America
+101	Haiti	Caribbean
+102	Heard Island and McDonald Islands	Australia
+103	Holy See	Southern_Europe
+104	Honduras	Central_America
+105	Hungary	Eastern_Europe
+106	Iceland	Northern_Europe
+107	India	Southern_Asia
+108	Indonesia	South-eastern_Asia
+109	Iran (Islamic Republic of)	Southern_Asia
+110	Iraq	Western_Asia
+111	Ireland	Northern_Europe
+112	Isle of Man	Northern_Europe
+113	Israel	Western_Asia
+114	Italy	Southern_Europe
+115	Jamaica	Caribbean
+116	Japan	Eastern_Asia
+117	Jersey	Northern_Europe
+118	Jordan	Western_Asia
+119	Kazakhstan	Central_Asia
+120	Kenya	Eastern_Africa
+121	Kiribati	Micronesia
+122	Kuwait	Western_Asia
+123	Kyrgyzstan	Central_Asia
+124	Lao People's Democratic Republic	South-eastern_Asia
+125	Latvia	Northern_Europe
+126	Lebanon	Western_Asia
+127	Lesotho	Southern_Africa
+128	Liberia	Western_Africa
+129	Libya	Northern_Africa
+130	Liechtenstein	Western_Europe
+131	Lithuania	Northern_Europe
+132	Luxembourg	Western_Europe
+133	Madagascar	Eastern_Africa
+134	Malawi	Eastern_Africa
+135	Malaysia	South-eastern_Asia
+136	Maldives	Southern_Asia
+137	Mali	Western_Africa
+138	Malta	Southern_Europe
+139	Marshall Islands	Micronesia
+140	Martinique	Caribbean
+141	Mauritania	Western_Africa
+142	Mauritius	Eastern_Africa
+143	Mayotte	Eastern_Africa
+144	Mexico	Central_America
+145	Micronesia (Federated States of)	Micronesia
+146	Monaco	Western_Europe
+147	Mongolia	Eastern_Asia
+148	Montenegro	Southern_Europe
+149	Montserrat	Caribbean
+150	Morocco	Northern_Africa
+151	Mozambique	Eastern_Africa
+152	Myanmar	South-eastern_Asia
+153	Namibia	Southern_Africa
+154	Nauru	Micronesia
+155	Nepal	Southern_Asia
+156	Netherlands	Western_Europe
+157	New Caledonia	Melanesia
+158	New Zealand	Australia
+159	Nicaragua	Central_America
+160	Niger	Western_Africa
+161	Nigeria	Western_Africa
+162	Niue	Polynesia
+163	Norfolk Island	Australia
+164	North Macedonia	Southern_Europe
+165	Northern Mariana Islands	Micronesia
+166	Norway	Northern_Europe
+167	Oman	Western_Asia
+168	Pakistan	Southern_Asia
+169	Palau	Micronesia
+170	Panama	Central_America
+171	Papua New Guinea	Melanesia
+172	Paraguay	South_America
+173	Peru	South_America
+174	Philippines	South-eastern_Asia
+175	Pitcairn	Polynesia
+176	Poland	Eastern_Europe
+177	Portugal	Southern_Europe
+178	Puerto Rico	Caribbean
+179	Qatar	Western_Asia
+180	Republic of Korea	Eastern_Asia
+181	Republic of Moldova	Eastern_Europe
+182	Réunion	Eastern_Africa
+183	Romania	Eastern_Europe
+184	Russian Federation	Eastern_Europe
+185	Rwanda	Eastern_Africa
+186	Saint Barthélemy	Caribbean
+187	Saint Helena	Western_Africa
+188	Saint Kitts and Nevis	Caribbean
+189	Saint Lucia	Caribbean
+190	Saint Martin (French Part)	Caribbean
+191	Saint Pierre and Miquelon	Northern_America
+192	Saint Vincent and the Grenadines	Caribbean
+193	Samoa	Polynesia
+194	San Marino	Southern_Europe
+195	Sao Tome and Principe	Middle_Africa
+196	Sark	Northern_Europe
+197	Saudi Arabia	Western_Asia
+198	Senegal	Western_Africa
+199	Serbia	Southern_Europe
+200	Seychelles	Eastern_Africa
+201	Sierra Leone	Western_Africa
+202	Singapore	South-eastern_Asia
+203	Sint Maarten (Dutch part)	Caribbean
+204	Slovakia	Eastern_Europe
+205	Slovenia	Southern_Europe
+206	Solomon Islands	Melanesia
+207	Somalia	Eastern_Africa
+208	South Africa	Southern_Africa
+209	South Georgia and the South Sandwich Islands	South_America
+210	South Sudan	Eastern_Africa
+211	Spain	Southern_Europe
+212	Sri Lanka	Southern_Asia
+213	State of Palestine	Western_Asia
+214	Sudan	Northern_Africa
+215	Suriname	South_America
+216	Svalbard and Jan Mayen Islands	Northern_Europe
+217	Sweden	Northern_Europe
+218	Switzerland	Western_Europe
+219	Syrian Arab Republic	Western_Asia
+220	Tajikistan	Central_Asia
+221	Thailand	South-eastern_Asia
+222	Timor-Leste	South-eastern_Asia
+223	Togo	Western_Africa
+224	Tokelau	Polynesia
+225	Tonga	Polynesia
+226	Trinidad and Tobago	Caribbean
+227	Tunisia	Northern_Africa
+228	Türkiye	Western_Asia
+229	Turkmenistan	Central_Asia
+230	Turks and Caicos Islands	Caribbean
+231	Tuvalu	Polynesia
+232	Uganda	Eastern_Africa
+233	Ukraine	Eastern_Europe
+234	United Arab Emirates	Western_Asia
+235	United Kingdom of Great Britain and Northern Ireland	Northern_Europe
+236	United Republic of Tanzania	Eastern_Africa
+237	United States Minor Outlying Islands	Micronesia
+238	United States of America	Northern_America
+239	United States Virgin Islands	Caribbean
+240	Uruguay	South_America
+241	Uzbekistan	Central_Asia
+242	Vanuatu	Melanesia
+243	Venezuela (Bolivarian Republic of)	South_America
+244	Viet Nam	South-eastern_Asia
+245	Wallis and Futuna Islands	Polynesia
+246	Western Sahara	Northern_Africa
+247	Yemen	Western_Asia
+248	Zambia	Eastern_Africa
+249	Zimbabwe	Eastern_Africa
