@@ -1,30 +1,39 @@
---- 
-title: LIFEWISE
-authors: Kateryna Pantiukh
-editor: GPT-3.5
+# LIFEWISE 🏡
+## ✅ Life Index for Well-being and Expense Sustainability
 
----
+- Authors: Kateryna Pantiukh
+- Co-author: ChatGPT 3.5
 
-# {% $markdoc.frontmatter.title %}
-## Life Index for Well-being and Expense Sustainability
----
-- Authors: {% $markdoc.frontmatter.authors %}
-- Editor: {% $markdoc.frontmatter.editor %}
----
-[Data](/components/## The Data) | [Analysis](/Analysis) | [Conclusion](/)
+[Data]() | [Analysis](/Analysis) | [Conclusion](/)
+
+
+# Project Overview
 
 **LIFEWISE** _(Life Index for Well-being and Expense Sustainability)_ project utilizes regression analysis to identify optimal places to live, considering the balance between well-being and expenses. It offers actionable insights for individuals seeking high-quality living within their budget, while providing decision-making support for policymakers, urban planners, and real estate developers. The project aims to empower individuals and communities to make informed choices that enhance their overall quality of life and long-term sustainability. 
 
-## The Data
+# Importance
 
-Each service request contains a wealth of information. When a call is made, the data is recorded and categorized by various parameters such as:
+🇺🇦 The topic of LIFEWISE holds deep personal significance to me, as it is rooted in my own journey of seeking a new home in Europe. Having been forced to move because of war, I found myself faced with the daunting task of deciding where to rebuild my life. With limited knowledge about European countries and their living conditions, I yearned for a data-driven approach to guide my decision-making process. It was this pivotal moment that sparked my interest in exploring the balance between quality of life and cost of living. Through the LIFEWISE project, I aim to empower individuals like myself, who seek a fresh start in unfamiliar territories, by providing actionable insights that enable informed choices.
 
-- The date the request was created and closed
-- The agency responsible
-- The type of complaint
-- The location of the incident
+# Input Data
 
-And much more. All these details provide a comprehensive snapshot of the incident, allowing us to understand the types of issues city dwellers face and how effectively they are resolved.
+The data regarding the cost of living featured in the LIFEWISE project is sourced from [NUMBEO](https://www.numbeo.com/cost-of-living/rankings_by_country.jsp). 
+
+**Numbeo** is the world’s largest cost of living database. Numbeo is also a crowd-sourced global database of quality of life data: housing indicators, perceived crime rates, healthcare quality, transport quality, and other statistics. By utilizing Numbeo's data, LIFEWISE ensures the accuracy and relevance of the cost-related information.
+
+The **input files** used in the LIFEWISE project are stored in the following location: input/data.xlsx. These files serve as the foundation of the analysis, containing the relevant data on cost of living, quality of life, counry and region.
+
+**Quality of Life Index** _(higher is better)_ is an estimation of overall quality of life by using an empirical formula which takes into account 
+- purchasing power index (higher is better), 
+- pollution index (lower is better), 
+- house price to income ratio (lower is better), 
+- cost of living index (lower is better), 
+- safety index (higher is better), 
+- health care index (higher is better), 
+- traffic commute time index (lower is better) and 
+- climate index (higher is better).
+
+These indices are relative to **New York City** (NYC). Which means that for New York City, each index should be 100(%). If a city has a Cost of Living Index of 120, it means Numbeo has estimated it is 20% more expensive than New York (excluding rent).
 
 ## Analysis
 
