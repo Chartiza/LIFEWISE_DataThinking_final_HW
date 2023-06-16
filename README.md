@@ -1,3 +1,5 @@
+![house](https://github.com/Chartiza/LIFEWISE_DataThinking_final_HW/assets/15068419/7c7950b0-0acc-4bd0-b0af-126402e8f138)
+
 # LIFEWISE_DataThinking_final_HW
 
 This repository contains the final project of Kateryna Pantiukh for the DataThinking course.
