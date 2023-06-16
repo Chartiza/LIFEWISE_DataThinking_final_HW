@@ -33,19 +33,26 @@ The **input files** used in the LIFEWISE project are stored in the following loc
 - traffic commute time index (lower is better) and 
 - climate index (higher is better).
 
-These indices are relative to **New York City** (NYC). Which means that for New York City, each index should be 100(%). If a city has a Cost of Living Index of 120, it means Numbeo has estimated it is 20% more expensive than New York (excluding rent).
+![Formula](input/CodeCogsEqn-1.svg)
+
+_where is_
+**QLI** - Quality of Life Index;
+**pPIR** - purchasingPowerInclRentIndex;
+**hPIR** - housePriceToIncomeRatio;
+**LivI** - costOfLivingIndex;
+**SafI** - safetyIndex;
+**HltI** - healthIndex;
+**TrfI** - trafficTimeIndex;
+**PolI** - pollutionIndex;
+**ClmI** - climateIndex.
+
+These indices are relative to New York City (NYC). Which means that for New York City, each index should be 100(%). If a city has a Cost of Living Index of 120, it means Numbeo has estimated it is 20% more expensive than New York (excluding rent).
 
 ## Analysis
 
 By examining the 'Complaint Type' field in our data, we can start to see trends emerge. Perhaps we find that noise complaints spike during the summer months, or that a specific borough has a high incidence of pothole reports. This analysis can provide insights that help shape city policy and resource allocation.
 
-## Response Time: A Measure of Efficiency
 
-The 'Created Date' and 'Closed Date' fields can tell us a lot about how responsive the city is to these service requests. By calculating the difference between these dates, we can measure the efficiency of each agency and even identify patterns that might be affecting performance.
-
-## Location, Location, Location
-
-With 'Incident Zip' and 'Borough' fields, we can plot service requests geographically. This visualization can highlight areas with high service demand or places where certain types of complaints are more prevalent. This information is invaluable for city planners and policymakers.
 
 ## Wrapping Up
 
