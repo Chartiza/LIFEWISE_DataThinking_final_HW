@@ -1,3 +1,4 @@
+
 # LIFEWISE 🏡
 ## ✅ Life Index for Well-being and Expense Sustainability
 
