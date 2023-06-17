@@ -24,29 +24,23 @@ The data regarding the cost of living featured in the LIFEWISE project is source
 
 The **input files** used in the LIFEWISE project are stored in the following location: input/data.xlsx. These files serve as the foundation of the analysis, containing the relevant data on cost of living, quality of life, counry and region.
 
-**Quality of Life Index** _(higher is better)_ is an estimation of overall quality of life by using an empirical formula which takes into account 
-- purchasing power index (higher is better), 
-- pollution index (lower is better), 
-- house price to income ratio (lower is better), 
-- cost of living index (lower is better), 
-- safety index (higher is better), 
-- health care index (higher is better), 
-- traffic commute time index (lower is better) and 
-- climate index (higher is better).
+**Quality of Life Index** _(higher is better)_ is an estimation of overall quality of life by using an empirical formula which takes into account purchasing power index (higher is better), pollution index (lower is better), house price to income ratio (lower is better), cost of living index (lower is better), safety index (higher is better), health care index (higher is better), traffic commute time index (lower is better) and climate index (higher is better).
 
-![Formula](input/CodeCogsEqn-2.svg)
 
-_where is_
-**QLI** - Quality of Life Index;
-**pPIR** - purchasingPowerInclRentIndex;
-**hPIR** - housePriceToIncomeRatio;
-**SafI** - safetyIndex;
-**HltI** - healthIndex;
-**TrfI** - trafficTimeIndex;
-**PolI** - pollutionIndex;
-**ClmI** - climateIndex.
+$$ \text{QLI} = \max \left(0,100+ \frac{pPIR +HltI}{\text{2,5}} - hPIR + \frac{SafI + TrfI}{\text{2,0}} + \frac{PolI * 2 + ClmI}{\text{3,0}}  \right)  $$
 
-These indices are relative to New York City (NYC). Which means that for New York City, each index should be 100(%). If a city has a Cost of Living Index of 120, it means Numbeo has estimated it is 20% more expensive than New York (excluding rent).
+where:
+- QLI - Quality of Life Index;
+- pPIR - purchasingPowerInclRentIndex;
+- hPIR - housePriceToIncomeRatio;
+- SafI - safetyIndex;
+- HltI - healthIndex;
+- TrfI - trafficTimeIndex;
+- PolI - pollutionIndex;
+- ClmI - climateIndex.
+
+
+These indices are relative to New York City (NYC). Which means that for New York City, each index should be 100(%). If a city has a Traffic Commute Time Index of 120, it means Numbeo has estimated it is 20% more expensive than New York.
 
 ## Part 1. Analysis of the correlation between the quality of life and the cost of living
 
@@ -55,17 +49,22 @@ The primary objective of this research is to investigate the correlation between
 1) Does a positive correlation exist between the cost of living and the quality of life?
 2) Are there countries that offer a higher quality of life than expected based on their cost of living? 
 
-On first step we explore the relationship between the quality of life and the cost of living indices. To visualize this relationship, we generated a plot (Figure 1A) that clearly illustrates a positive correlation between the quality of life and the cost of living. Furthermore, we divided the countries into quantiles based on their Cost_vs_quality_ratio (CQR) and visualized this distribution (Figure 1B). From this analysis, we specifically focused on countries in the first quantile, which we labeled as "good-high" in terms of their cost quality index. This selection allows us to identify countries that offer a higher quality of life compared to their cost of living.
-
-CQR = QLI / LivI
-
-_where is_
-**CQR** - Cost_vs_quality_ratio;
-**QLI** - Quality of Life Index;
-**LivI** - costOfLivingIndex;
+On first step we explore the relationship between the quality of life and the cost of living indices. To visualize this relationship, we generated a plot (Figure 1A) that clearly illustrates a positive correlation between the quality of life and the cost of living. 
 
 ![Fig1](https://github.com/Chartiza/LIFEWISE_DataThinking_final_HW/assets/15068419/d1cccc24-eaa1-4dc3-b73b-8284c653bc5e)
 
+Furthermore, we divided the countries into quantiles based on their Cost_vs_quality_ratio (CQR) and visualized this distribution (Figure 1B). From this analysis, we specifically focused on countries in the first quantile, which we labeled as "good-high" in terms of their cost quality index. This selection allows us to identify countries that offer a higher quality of life compared to their cost of living.
+
+$$ \text{CQR} = \frac{QLI}{LivI}  $$
+
+where:
+- CQR - Cost_vs_quality_ratio;
+- QLI - Quality of Life Index;
+- LivI - costOfLivingIndex;
+
+Next we refined the selection process by filtering countries based on two key parameters. Firstly, we considered countries falling within the "good-low" or "good-high" quartile of the cost quality index. This criterion ensured that we focused on countries with favorable cost-quality ratios. Secondly, we established a minimum threshold of 160 for the Quality_of_Life_Index. By applying these filters, we were able to identify a subset of countries that meet both criteria, indicating a higher quality of life relative to their cost of living.
+
+Based on our analysis, the top countries that emerged as having a higher quality of life relative to their cost of living include the **Netherlands, Finland, Oman, Germany, United Arab Emirates, Spain, Estonia, Slovenia, Portugal, Croatia, Lithuania, and the Czech Republic**. These countries demonstrate a favorable balance between quality of life and expenses, making them attractive options for individuals seeking an enhanced standard of living within their budget.
 
 
 ## Script. Part 1.
@@ -166,9 +165,100 @@ mrg1 = mrg[(mrg['Quality_of_Life_Index'] >= 160) &
 mrg1.to_excel('results/top_counties.xlsx')
 ```
 
-## Wrapping Up
+## Part 2. Prediction Life quality based on Life cost
 
-The data from 3-1-1 service requests tells a story that goes beyond mere numbers. It's a narrative about the city's responsiveness, its challenges, and its ongoing journey to improve the lives of its residents. As we continue to analyze this data, we can help create a more responsive and efficient city.
+In the second part of our analysis, we focused on making predictions. We built a linear regression model using the data from our merged dataset. The formula for the model is
+
+$$ \text{y} = \text{slope} * \text{x} + \text{intercept}$$
+ 
+where:
+- y - the Quality of Life Index and 
+- x - the Cost of Living Index. 
+  
+The model's coefficients indicate the relationship between these variables. The coefficient of determination (r-squared) for the model is 51.6%, indicating that 51.6% of the variance in the Quality of Life Index can be explained by the Cost of Living Index. The extremely low p-value (1.51e-14) suggests that the relationship between these variables is statistically significant.
+
+As an example of our prediction capabilities, let's consider a scenario where the life cost is 2400 EUR. Using our regression model, we predicted the corresponding life quality index to be 134.1. This index indicates that the predicted standard of living aligns with the 50% best countries in our dataset.
+
+It's important to note that this prediction is based on the relationship between the cost of living and quality of life established by our model. However, as mentioned earlier, the model has a moderate predictive power with an r-squared value of 51.6%. Therefore, while the prediction provides valuable insights, it should be interpreted with caution and considered alongside other factors when making decisions related to choosing a living destination.
+
+The percentile bin analysis further supports our prediction, categorizing the index within the 50% best countries in terms of their standard of living. This means that the predicted life quality index of 134.1 indicates a relatively high standard of living compared to other countries.
+
+It's important to keep in mind that these results are based on the available data and the assumptions made by our regression model. Individual preferences and specific circumstances may vary, so it's recommended to conduct further research and consider additional factors before making any final decisions regarding living choices.
+
+
+## Script. Part 2.
+```python
+# Part 2. Predictions
+# import packages
+import pandas as pd
+import plotly.express as px
+import numpy as np
+from sklearn import datasets, linear_model
+import matplotlib.pyplot as plt
+from scipy.stats import linregress
+
+mrg = pd.read_excel('results/merged_m.xlsx')
+
+# build a model
+# extract the columns you need
+X = mrg['Cost_of_Living_Index'].values.reshape(-1,1)
+y = mrg['Quality_of_Life_Index'].values.reshape(-1,1)
+# create a linear regression model
+regr = linear_model.LinearRegression()
+regr.fit(X, y)
+
+# Print the formula and coefficients
+from scipy import stats
+
+X1 = mrg['Cost_of_Living_Index']
+y1 = mrg['Quality_of_Life_Index']
+slope, intercept, r_value, p_value, std_err = stats.linregress(X1, y1)
+
+print('Formula is: y = ', slope.round(1), 'x + ', intercept.round(1))
+print('Where y is the Quality of Life Index and x is the Cost of Living Index','\n')
+print("r-squared:", (r_value**2*100).round(1))
+print("p_value:", p_value)
+print("p_value:", std_err)
+
+cost = 2400
+# in EUR per month
+NY_cost_of_living = 4900
+lcost_index = cost/NY_cost_of_living*100
+lqual_index = regr.predict(lcost_index)[0][0]
+
+print('The predicted life quality index for '
+      +str(cost)+' EUR life cost is', str(lqual_index.round(1)))
+bins = np.percentile(mrg['Quality_of_Life_Index'], np.arange(0, 101, 10))
+new_value_bin = np.digitize(lqual_index, bins) 
+
+d = {
+  10: "top 10% best",
+  9: "top 20% best",
+  8: "top 30% best",
+  7: "40% best",
+  6: "50% best",
+  5: "50% worst",
+  4: "40% worst",
+  3: "top 30% worst",
+  2: "top 20% worst",
+  1: "top 10% worst"
+}
+
+print(f'This index refers to the {d[new_value_bin]} countries in terms of standard of living','\n')
+print('REMEMBER! r2=0.51 for this model. That means the model has quite low predictive power.')
+```
+
+# Conclusion
+
+The LIFEWISE (Life Index for Well-being and Expense Sustainability) project has successfully utilized regression analysis to identify optimal places to live based on the balance between well-being and expenses. By analyzing data on quality of life and cost of living, we aimed to provide actionable insights for individuals seeking high-quality living within their budget, while also offering decision-making support for policymakers, urban planners, and real estate developers.
+
+Through our analysis, we discovered a positive correlation between life cost and life quality, indicating that countries with higher costs tend to offer better quality of life. However, our project went beyond this correlation by identifying countries that exceeded expectations in terms of their life quality based on their cost. By filtering countries based on the quantiles of the cost quality index and setting a threshold of 160 for the Quality_of_Life_Index, we identified several top countries, including the Netherlands, Finland, Oman, Germany, United Arab Emirates, Spain, Estonia, Slovenia, Portugal, Croatia, Lithuania, and the Czech Republic.
+
+Furthermore, we developed a predictive model to estimate the life quality index based on the cost of living. Our model, although with a moderate predictive power of 51.6% (r-squared), provided insights into the expected standard of living for a given life cost. For instance, in our example prediction, a life cost of 2400 EUR corresponded to a predicted life quality index of 134.1, indicating a relatively high standard of living comparable to the 50% best countries in our dataset.
+
+It is crucial to acknowledge the limitations of our project, such as the simplifications made in the regression model and the subjective nature of quality of life assessments. Therefore, the results should be considered as one aspect among many when making decisions regarding living choices. It is recommended to conduct further research, consider individual preferences and circumstances, and consult additional factors before making any final decisions.
+
+Overall, the LIFEWISE project aims to empower individuals and communities to make informed choices that enhance their overall quality of life and long-term sustainability. By combining data thinking principles with real-life decision-making scenarios, we have provided a valuable tool for individuals seeking a balance between well-being and expenses, while also contributing insights to policymakers and urban planners for creating livable and sustainable environments.
 
 ---
 

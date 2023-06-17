@@ -16,5 +16,10 @@ This repository contains the final project of Kateryna Pantiukh for the DataThin
 
 Feel free to explore the contents of this repository to learn more about the LIFEWISE project and access the code used for the analysis. 
 
+## Short results
+
+Based on our analysis, the top countries that emerged as having a higher quality of life relative to their cost of living include the **Netherlands, Finland, Oman, Germany, United Arab Emirates, Spain, Estonia, Slovenia, Portugal, Croatia, Lithuania, and the Czech Republic**. These countries demonstrate a favorable balance between quality of life and expenses, making them attractive options for individuals seeking an enhanced standard of living within their budget.
+
+----------------------------------------------
 
 For any inquiries or further information about the project, please feel free to contact the author, Kateryna Pantiukh, via email at [pantiukh@gmail.com](mailto:pantiukh@gmail.com).
