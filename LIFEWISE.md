@@ -40,7 +40,6 @@ _where is_
 **QLI** - Quality of Life Index;
 **pPIR** - purchasingPowerInclRentIndex;
 **hPIR** - housePriceToIncomeRatio;
-**LivI** - costOfLivingIndex;
 **SafI** - safetyIndex;
 **HltI** - healthIndex;
 **TrfI** - trafficTimeIndex;
@@ -56,9 +55,18 @@ The primary objective of this research is to investigate the correlation between
 1) Does a positive correlation exist between the cost of living and the quality of life?
 2) Are there countries that offer a higher quality of life than expected based on their cost of living? 
 
-To answer this questions we first build an interactive plot with vizualisation relationship between this indexes (Figure 1).
+On first step we explore the relationship between the quality of life and the cost of living indices. To visualize this relationship, we generated a plot (Figure 1A) that clearly illustrates a positive correlation between the quality of life and the cost of living. Furthermore, we divided the countries into quantiles based on their Cost_vs_quality_ratio (CQR) and visualized this distribution (Figure 1B). From this analysis, we specifically focused on countries in the first quantile, which we labeled as "good-high" in terms of their cost quality index. This selection allows us to identify countries that offer a higher quality of life compared to their cost of living.
 
-[Fig1](/results/Cost_vs_quality.html)
+CQR = QLI / LivI
+
+_where is_
+**CQR** - Cost_vs_quality_ratio;
+**QLI** - Quality of Life Index;
+**LivI** - costOfLivingIndex;
+
+![Fig1](https://github.com/Chartiza/LIFEWISE_DataThinking_final_HW/assets/15068419/d1cccc24-eaa1-4dc3-b73b-8284c653bc5e)
+
+
 
 ## Script. Part 1.
 ```python
