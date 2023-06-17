@@ -58,6 +58,7 @@ The primary objective of this research is to investigate the correlation between
 
 To answer this questions we first build an interactive plot with vizualisation relationship between this indexes (Figure 1).
 
+[Fig1](/results/Cost_vs_quality.html)
 
 ## Script. Part 1.
 ```python
